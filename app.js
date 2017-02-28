@@ -38,12 +38,13 @@ app.get('/', (req, res) => {
 
 
 fs.readFile('./currentvid.txt', (err, data) => {
-    if (err) throw err;
+    if (err) return;
     console.log(String(data))
     newVideo(String(data))
 })
 
 function newVideo(name) {
+  omxplayer.stop();
     console.log("Playing file " + mediaFolder + "/" + name)
     omxplayer.start(mediaFolder + "/" + name, function(error) {
         console.log(error)
