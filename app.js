@@ -44,14 +44,15 @@ fs.readFile('./currentvid.txt', (err, data) => {
 })
 
 function newVideo(name) {
-  omxplayer.stop();
-    console.log("Playing file " + mediaFolder + "/" + name)
-    omxplayer.start(mediaFolder + "/" + name, function(error) {
-        console.log(error)
-    });
-    //write to file so it will reload next time
-    fs.writeFile('./currentvid.txt', name, console.log)
-
+    omxplayer.stop();
+    setTimeout(() => {
+        console.log("Playing file " + mediaFolder + "/" + name)
+        omxplayer.start(mediaFolder + "/" + name, function(error) {
+            console.log(error)
+        });
+        //write to file so it will reload next time
+        fs.writeFile('./currentvid.txt', name, console.log)
+    }, 1000)
 }
 
 app.listen(3000)
