@@ -7,12 +7,7 @@ var fs = require('fs');
 
 
 var configuration = {
-    omxPlayerParams: [
-        '--loop',
-        '--no-osd',
-        '-o hdmi',
-        '-b'
-    ]
+    omxPlayerParams: ['--loop', '--no-osd', '-o', 'hdmi', '-b']
 }
 var OMXPlayer = require('omxplayer')
 var omxplayer = new OMXPlayer(configuration);
@@ -42,17 +37,19 @@ app.get('/', (req, res) => {
 })
 
 
-fs.readFile('./currentvid', (err, data) => {
+fs.readFile('./currentvid.txt', (err, data) => {
     if (err) throw err;
     console.log(String(data))
     newVideo(String(data))
 })
 
 function newVideo(name) {
-  console.log("Playing file " + mediaFolder + "/" + name)
+    console.log("Playing file " + mediaFolder + "/" + name)
     omxplayer.start(mediaFolder + "/" + name, function(error) {
         console.log(error)
     });
+    //write to file so it will reload next time
+    fs.writeFile('./currentvid.txt', name, console.log)
 
 }
 
