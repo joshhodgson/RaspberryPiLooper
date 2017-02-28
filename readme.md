@@ -11,7 +11,7 @@ Start the app using `node app.js` and navigate to `http://[pi ip]:3000` to uploa
 - Ability to file manage previously uploaded files and choose which is active
 - Ability to delete uploaded files
 - New web control UI and upload progress monitor
-- Ability to react if files fail (possibly testing files to make sure they play through before making it the 'go to' file)
+- Ability to react if files fail (possibly testing files to make sure they play through before making it the 'go to' file because upload might have failed)
 - Security, obviously
 
 #### To Do (long term)
