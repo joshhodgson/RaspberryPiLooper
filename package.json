@@ -1,0 +1,24 @@
+{
+  "name": "pilooper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshhodgson/RaspberryPiLooper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshhodgson/RaspberryPiLooper/issues"
+  },
+  "homepage": "https://github.com/joshhodgson/RaspberryPiLooper#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "express-formidable": "^1.0.0",
+    "omxplayer": "^1.0.0"
+  }
+}
