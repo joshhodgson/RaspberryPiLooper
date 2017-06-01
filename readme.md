@@ -16,7 +16,7 @@ cd node-v7.6.0-linux-armv7l
 sudo cp -R * /usr/local/
 ```
 
-For other Pi's, substitute `arm7l` accordingly (find the one needed by running `uname -a`)
+For other Pi's, substitute `armv7l` accordingly (find the one needed by running `uname -a`)
 Then to install dependencies, just do `npm install` from the app directory.
 
 ### To do (short term)
